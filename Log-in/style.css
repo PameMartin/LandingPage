@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Patrick+Hand&display=swap');
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+:root {
+    --pink:#DA627D;
+    --arena: #ebebd3; 
+    --yellow:#F4D35E;
+    --lightpink: #ed869c;
+    --letra: 'Patrick Hand';
+}
+body {
+    font-family: var(--letra);
+    background: var(--arena);
+    width: 100%;
+    height: 100vh;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.greeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    animation: fade-and-back 8s ease infinite;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.3rem;
+    text-align: center;
+    margin: 1rem;
+    color: var(--lightpink);
+}
+p {
+    text-align: center;
+    color: var(--lightpink);
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 6rem;
+}
+input {
+    width: 15rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    background-color: var(--pink);
+    margin: 0.3rem;
+    border-radius: 0.5rem;
+}
+input:hover {
+    background: var(--lightpink);
+}
+input::placeholder {
+    color: var(--arena);
+    font-family: var(--letra);
+    font-size: 1.1rem;
+    padding-left: 0.3rem;
+}
+
+button {
+    width: 15rem;
+    height: 3rem;
+    margin-top: 0.8rem;
+    background: var(--pink);
+    color: var(--arena);
+    border: none;
+    border-radius: 0.5rem;
+    font-family: var(--letra);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+button:hover {
+    background: var(--arena);
+    color: var(--pink);
+    border: 1px solid var(--pink);
+    transition: all 0.9s ease;
+}
+a {
+    color: black;
+    margin-left: 0.3rem;
+}
+.sign-in {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+@keyframes fade-and-back {
+    0% {
+        transform: scale(1.1);
+    }
+    25% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    90% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@media (min-width: 481px) {
+    input {
+        width: 25rem;
+    }
+    button {
+        width: 25rem;
+    }
+}
+@media (min-width: 769px) {
+    input {
+        width: 35rem;
+        height: 3.5rem;
+    }
+    button {
+        width: 35rem;
+        height: 3.5rem;
+    }
+    h1 {
+        margin: 0;
+    }
+}
